@@ -1,2 +1,2 @@
-# GL-SD: Collaboratively Supervised Global-Local Semantic Dictionary for Video Captioning
+# GL-RG: Collaboratively Supervised Global-Local Semantic Dictionary for Video Captioning
 
