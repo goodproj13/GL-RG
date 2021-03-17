@@ -1,2 +1,4 @@
-# GL-RG: Collaboratively Supervised Global-Local Semantic Dictionary for Video Captioning
+# GL-RG: Global-Local Representation Granularity for Video Captioning
 
+
+Code coming soon.
