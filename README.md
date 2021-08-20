@@ -2,6 +2,8 @@
 
 ![framework.png](Figs/framework.png)
 
+
+
 ## Dependencies
 
 * Python 2.7
@@ -11,17 +13,22 @@
 * torch, numpy, scikit-image, h5py 
 
 
+
 ## Installation
-Please run to download Stanford CoreNLP models:
+
+Please run following script to download [Stanford CoreNLP 3.6.0](http://stanfordnlp.github.io/CoreNLP/index.html) models to `coco-caption/`:
 
 ```bash
 cd coco-caption
 ./get_stanford_models.sh
 ```
 
-If `coco-caption/`, `data/` or `model/` has not be prepared, please find detailed steps [Here](docs/INSTALL.md) for installation and dataset preparation.
+Check out the `coco-caption`,  `cider`,  `data/` and `model/` projects into your working directory. If not, please find detailed steps [Here](docs/INSTALL.md) for installation and dataset preparation.
+
+
 
 ## Model Zoo
+
 | Model | Dataset | Exp. | B@4 | M | R | C | Download Link |
 | :--------: | :---------: | :-----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
 | GL-RG | MSR-VTT | XE | 45.5  | 30.1 | 62.6 | 51.2 | [Google Drive]() |
@@ -31,7 +38,10 @@ If `coco-caption/`, `data/` or `model/` has not be prepared, please find detaile
 | GL-RG | MSVD | DXE | 57.7 | 38.6 | 74.9 | 95.9 | [Google Drive]() |
 | GL-RG + IT | MSVD | DR | 60.5 | 38.9 | 76.4 | 101.0 | [Google Drive]() |
 
+
+
 ## Test
+
 Please check the trained model weights under the `model/` directory (following [Installation](docs/INSTALL.md) ) and run:
 ```bash
 ./test.sh
@@ -39,6 +49,16 @@ Please check the trained model weights under the `model/` directory (following [
 
 **Note:** Please reset `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if running with different models.
 
+
+
 ## License
 
 `GL-RG` is released under the MIT license.
+
+
+
+## Acknowledgements
+We are truly thankful of the following prior efforts in terms of knowledge contributions and open-source repos.
++ SA-LSTM: Describing Videos by Exploiting Temporal Structure (ICCV'15) [[paper]](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Yao_Describing_Videos_by_ICCV_2015_paper.pdf) [[implement code]](https://github.com/hobincar/SA-LSTM)
++ RecNet: Reconstruction Network for Video Captioning (CVPR'18) [[paper]](https://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Reconstruction_Network_for_CVPR_2018_paper.pdf) [[official code]](https://github.com/hobincar/RecNet) 
++ SAAT: Syntax-Aware Action Targeting for Video Captioning (CVPR'20) [[paper]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zheng_Syntax-Aware_Action_Targeting_for_Video_Captioning_CVPR_2020_paper.pdf) [[official code]](https://github.com/SydCaption/SAAT)

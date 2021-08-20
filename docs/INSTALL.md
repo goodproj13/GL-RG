@@ -6,25 +6,29 @@ You can use anaconda or miniconda to install the dependencies:
 conda create GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py
 ```
 
-## Preparation
-
 ### Microsoft COCO Caption Evaluation
 
-Please run following script to download evaluation codes for MS COCO caption generation and put them under the `coco-caption` directory:
+Please run following script to download evaluation codes for [Microsoft COCO Caption Evaluation](https://github.com/tylin/coco-caption) and put them under the `coco-caption` directory:
 
 ```ba
 cd GL-RG
 git clone https://github.com/tylin/coco-caption.git
 ```
 
-You will need to download the [Stanford CoreNLP 3.6.0](http://stanfordnlp.github.io/CoreNLP/index.html) models for use by SPICE. To do this, run:
+Please refer to [Microsoft COCO Caption Evaluation](https://github.com/tylin/coco-caption) for more setup details.
 
-```bas
-cd coco-caption
-./get_stanford_models.sh
+### CIDEr Code
+
+Please run following script to download [Consensus-based Image Description Evaluation](https://github.com/plsang/cider) and put them under the `cider` directory:
+
+```ba
+cd GL-RG
+git clone https://github.com/plsang/cider.git
 ```
 
 
+
+## Preparation
 
 ### Datasets
 
