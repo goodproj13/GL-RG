@@ -12,7 +12,7 @@
 * Pytorch 0.2
 * [Microsoft COCO Caption Evaluation](https://github.com/tylin/coco-caption)
 * [CIDEr](https://github.com/plsang/cider)
-* torch, numpy, scikit-image, h5py 
+* numpy, scikit-image, h5py 
 
 This repo was tested with Python 2.7, [PyTorch](https://pytorch.org) 0.2.0, [cuDNN](https://developer.nvidia.com/cudnn) 6.0, and [CUDA](https://developer.nvidia.com/cuda-toolkit) 8.0. But it should be runnable with more recent PyTorch versions.
 
@@ -62,7 +62,7 @@ Check out the trained model weights under the `model/` directory (following [Ins
 ./test.sh
 ```
 
-**Note:** Please modify `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if experiment setting changes. More details refer to [Here](docs/TEST.md).
+**Note:** Please modify `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if experiment setting changes. For more details please refer to [Here](docs/TEST.md).
 
 
 
