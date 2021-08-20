@@ -23,7 +23,7 @@ cd coco-caption
 ./get_stanford_models.sh
 ```
 
-Check out the `coco-caption`,  `cider`,  `data/` and `model/` projects into your working directory. If not, please find detailed steps [Here](docs/INSTALL.md) for installation and dataset preparation.
+Check out the `coco-caption/`,  `cider/`,  `data/` and `model/` projects into your working directory. If not, please find detailed steps [Here](docs/INSTALL.md) for installation and dataset preparation.
 
 
 
@@ -42,7 +42,7 @@ Check out the `coco-caption`,  `cider`,  `data/` and `model/` projects into your
 
 ## Test
 
-Please check the trained model weights under the `model/` directory (following [Installation](docs/INSTALL.md) ) and run:
+Check out the trained model weights under the `model/` directory (following [Installation](docs/INSTALL.md) ) and run:
 ```bash
 ./test.sh
 ```
