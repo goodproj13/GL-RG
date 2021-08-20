@@ -12,9 +12,24 @@
 * [CIDEr](https://github.com/plsang/cider)
 * torch, numpy, scikit-image, h5py 
 
+This repo was tested with Python 2.7, [PyTorch](https://pytorch.org) 0.2.0, [cuDNN](https://developer.nvidia.com/cudnn) 6.0, and [CUDA](https://developer.nvidia.com/cuda-toolkit) 8.0. But it should be runnable with more recent PyTorch versions.
+
+You can use anaconda or miniconda to install the dependencies:
+```bash
+conda create GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py
+```
+
 
 
 ## Installation
+
+First clone the this repository to any location using `--recursive`:
+
+```ba
+git clone --recursive https://github.com/goodproj13/GL-RG.git
+```
+
+
 
 Please run following script to download [Stanford CoreNLP 3.6.0](http://stanfordnlp.github.io/CoreNLP/index.html) models to `coco-caption/`:
 
