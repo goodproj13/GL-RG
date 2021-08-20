@@ -62,7 +62,7 @@ Check out the trained model weights under the `model/` directory (following [Ins
 ./test.sh
 ```
 
-**Note:** Please modify `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if running with different models. More details [Here](docs/TEST.md).
+**Note:** Please modify `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if setting changes. More details [Here](docs/TEST.md).
 
 
 
