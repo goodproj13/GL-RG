@@ -12,7 +12,14 @@
 
 
 ## Installation
-Please find detailed steps [Here](docs/INSTALL.md) for installation and dataset preparation.
+Please run to download Stanford CoreNLP models:
+
+```bash
+cd coco-caption
+./get_stanford_models.sh
+```
+
+If `coco-caption/`, `data/` or `model/` has not be prepared, please find detailed steps [Here](docs/INSTALL.md) for installation and dataset preparation.
 
 ## Model Zoo
 | Model | Dataset | Exp. | B@4 | M | R | C | Download Link |
@@ -25,7 +32,7 @@ Please find detailed steps [Here](docs/INSTALL.md) for installation and dataset 
 | GL-RG + IT | MSVD | DR | 60.5 | 38.9 | 76.4 | 101.0 | [Google Drive]() |
 
 ## Test
-Please prepare trained model weights and put them under the `model/` directory (following [Installation](docs/INSTALL.md) ) and run:
+Please check the trained model weights under the `model/` directory (following [Installation](docs/INSTALL.md) ) and run:
 ```bash
 ./test.sh
 ```

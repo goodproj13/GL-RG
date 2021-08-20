@@ -8,6 +8,24 @@ conda create GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py
 
 ## Preparation
 
+### Microsoft COCO Caption Evaluation
+
+Please run following script to download evaluation codes for MS COCO caption generation and put them under the `coco-caption` directory:
+
+```ba
+cd GL-RG
+git clone https://github.com/tylin/coco-caption.git
+```
+
+You will need to download the [Stanford CoreNLP 3.6.0](http://stanfordnlp.github.io/CoreNLP/index.html) models for use by SPICE. To do this, run:
+
+```bas
+cd coco-caption
+./get_stanford_models.sh
+```
+
+
+
 ### Datasets
 
 Download the `metadate` and `feature` from [Google Drive]() and then unzip them under the `data` directory like:
