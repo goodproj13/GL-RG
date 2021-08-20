@@ -2,6 +2,8 @@
 
 ![framework.png](Figs/framework.png)
 
+`GL-RG` exploit extensive vision representations from different video ranges to improve linguistic expression. We devise a novel global-local encoder to produce rich semantic vocabulary. With our incremental training strategy, `GL-RG` successfully leverages the global-local vision representation to achieve fine-grained captioning on video contents. 
+
 
 
 ## Dependencies
@@ -29,7 +31,7 @@ First clone the this repository to any location using `--recursive`:
 git clone --recursive https://github.com/goodproj13/GL-RG.git
 ```
 
-
+Check out the `coco-caption/`,  `cider/`,  `data/` and `model/` projects into your working directory. If not, please find detailed steps [Here](docs/INSTALL.md) for installation and dataset preparation.
 
 Please run following script to download [Stanford CoreNLP 3.6.0](http://stanfordnlp.github.io/CoreNLP/index.html) models to `coco-caption/`:
 
@@ -38,20 +40,18 @@ cd coco-caption
 ./get_stanford_models.sh
 ```
 
-Check out the `coco-caption/`,  `cider/`,  `data/` and `model/` projects into your working directory. If not, please find detailed steps [Here](docs/INSTALL.md) for installation and dataset preparation.
-
 
 
 ## Model Zoo
 
 | Model | Dataset | Exp. | B@4 | M | R | C | Download Link |
 | :--------: | :---------: | :-----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| GL-RG | MSR-VTT | XE | 45.5  | 30.1 | 62.6 | 51.2 | [Google Drive]() |
-| GL-RG | MSR-VTT | DXE | 46.9 | 30.4 | 63.9 | 55.0 | [Google Drive]() |
-| GL-RG + IT | MSR-VTT | DR | 46.9 | 31.2 | 65.7 | 60.6 | [Google Drive]() |
-| GL-RG | MSVD | XE | 52.3  | 33.8 | 70.4 | 58.7 | [Google Drive]() |
-| GL-RG | MSVD | DXE | 57.7 | 38.6 | 74.9 | 95.9 | [Google Drive]() |
-| GL-RG + IT | MSVD | DR | 60.5 | 38.9 | 76.4 | 101.0 | [Google Drive]() |
+| GL-RG | MSR-VTT | XE | 45.5  | 30.1 | 62.6 | 51.2 | [GL-RG_XE_msrvtt](https://github.com/goodproj13/GL-RG/tree/main/model/GL-RG_XE_msrvtt/model.pth) |
+| GL-RG | MSR-VTT | DXE | **46.9** | 30.4 | 63.9 | 55.0 | [GL-RG_DXE_msrvtt](https://github.com/goodproj13/GL-RG/tree/main/model/GL-RG_DXE_msrvtt/model.pth) |
+| GL-RG + IT | MSR-VTT | DR | **46.9** | **31.2** | **65.7** | **60.6** | [GL-RG_DR_msrvtt](https://github.com/goodproj13/GL-RG/tree/main/model/GL-RG_DR_msrvtt/model.pth) |
+| GL-RG | MSVD | XE | 52.3  | 33.8 | 70.4 | 58.7 | [GL-RG_XE_msvd](https://github.com/goodproj13/GL-RG/tree/main/model/GL-RG_XE_msvd/model.pth) |
+| GL-RG | MSVD | DXE | 57.7 | 38.6 | 74.9 | 95.9 | [GL-RG_DXE_msvd](https://github.com/goodproj13/GL-RG/tree/main/model/GL-RG_DXE_msvd/model.pth) |
+| GL-RG + IT | MSVD | DR | **60.5** | **38.9** | **76.4** | **101.0** | [GL-RG_DR_msvd](https://github.com/goodproj13/GL-RG/tree/main/model/GL-RG_DR_msvd/model.pth) |
 
 
 
@@ -62,7 +62,7 @@ Check out the trained model weights under the `model/` directory (following [Ins
 ./test.sh
 ```
 
-**Note:** Please reset `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if running with different models.
+**Note:** Please modify `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if running with different models. More details [Here](docs/TEST.md).
 
 
 

@@ -1,5 +1,7 @@
 ## Installation
 
+If you use `--recursive` to clone this repository, skip this section.
+
 ### Microsoft COCO Caption Evaluation
 
 Please run following script to download evaluation codes for [Microsoft COCO Caption Evaluation](https://github.com/tylin/coco-caption) and put them under the `coco-caption` directory:
@@ -24,9 +26,11 @@ git clone https://github.com/plsang/cider.git
 
 ## Preparation
 
+If you have cloned this repository from [this GitHub](https://github.com/goodproj13/GL-RG), skip this section.
+
 ### Datasets
 
-Download the `metadate` and `feature` from [Google Drive]() and then unzip them under the `data` directory like:
+Download the `metadate` and `feature` from [Here](https://github.com/goodproj13/GL-RG/tree/main/data) and then unzip them under the `data` directory like:
 ```shell
 data
 ├── feature
@@ -46,7 +50,7 @@ data
 
 ### Pre-trained Weights
 
-Download the pre-trained weights from [Google Drive]() and then unzip them under the `model` directory like:
+Download the pre-trained weights from [Here](https://github.com/goodproj13/GL-RG/tree/main/model) and then unzip them under the `model` directory like:
 ```shell
 model
 ├── GL-RG_XE_msrvtt
