@@ -57,12 +57,12 @@ cd coco-caption
 
 ## Test
 
-Check out the trained model weights under the `model/` directory (following [Installation](docs/INSTALL.md) ) and run:
+Check out the trained model weights under the `model/` directory (following [Installation](docs/INSTALL.md)) and run:
 ```bash
 ./test.sh
 ```
 
-**Note:** Please modify `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if setting changes. More details [Here](docs/TEST.md).
+**Note:** Please modify `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if experiment setting changes. More details refer to [Here](docs/TEST.md).
 
 
 
