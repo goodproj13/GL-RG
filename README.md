@@ -9,12 +9,12 @@
 ## Dependencies
 
 * Python 2.7
-* Pytorch 0.2
+* Pytorch 0.2 or 1.0
 * [Microsoft COCO Caption Evaluation](https://github.com/tylin/coco-caption)
 * [CIDEr](https://github.com/plsang/cider)
 * numpy, scikit-image, h5py 
 
-This repo was tested with Python 2.7, [PyTorch](https://pytorch.org) 0.2.0, [cuDNN](https://developer.nvidia.com/cudnn) 6.0, and [CUDA](https://developer.nvidia.com/cuda-toolkit) 8.0. But it should be runnable with more recent PyTorch versions.
+This repo was tested with Python 2.7, [PyTorch](https://pytorch.org) 0.2.0 (and 1.0), [cuDNN](https://developer.nvidia.com/cudnn) 6.0 (and 10.0), and [CUDA](https://developer.nvidia.com/cuda-toolkit) 8.0. But it should be runnable with more recent PyTorch>=1.0 versions.
 
 You can use anaconda or miniconda to install the dependencies:
 ```bash

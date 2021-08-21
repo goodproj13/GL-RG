@@ -485,8 +485,10 @@ class CaptionModel(nn.Module):
                             # (sorted) position c
                             local_logprob = ys[q, c]
                             candidate_logprob = beam_logprobs_sum[q] + local_logprob
-                            candidates.append({'c': ix.data[q, c], 'q': q, 'p': candidate_logprob.data[
-                                0], 'r': local_logprob.data[0]})
+                            # candidates.append({'c': ix.data[q, c], 'q': q, 'p': candidate_logprob.data[
+                            #     0], 'r': local_logprob.data[0]})
+                            candidates.append({'c': ix.data[q, c], 'q': q, 'p': candidate_logprob.data.item()
+                                , 'r': local_logprob.item()})
                     candidates = sorted(candidates, key=lambda x: -x['p'])
 
                     # construct new beams

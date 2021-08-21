@@ -87,6 +87,7 @@ def decode_sequence(ix_to_word, seq):
             if ix > 0:
                 if j >= 1:
                     txt = txt + ' '
+                ix = int(ix)
                 txt = txt + ix_to_word[ix]
             else:
                 break

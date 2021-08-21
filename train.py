@@ -90,7 +90,8 @@ def validate(model, criterion, loader, opt):
                 gt_avglogps.extend(gt_avglogp)
 
             loss = criterion(pred, labels[:, 1:], masks[:, 1:])
-            loss_sum += loss.data[0]
+            # loss_sum += loss.data[0]
+            loss_sum += loss.item()
 
         
         seq, logseq = model.sample(feats, {'beam_size': opt.beam_size})
