@@ -32,3 +32,8 @@ DATASET=msvd        # Choices: [msrvtt, msvd]
 The trained model weights `GL-RG_XE_msvd/model.pth` will be validated.
 
 The output captions and scores will be written to: `model/GL-RG_XE_msvd/test_result.json`.
+
+
+
+**(Optional)** Set `GPU_ID` to run with multi GPUs.
+

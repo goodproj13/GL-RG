@@ -18,7 +18,7 @@ This repo was tested with Python 2.7, [PyTorch](https://pytorch.org) 0.2.0, [cuD
 
 You can use anaconda or miniconda to install the dependencies:
 ```bash
-conda create GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py
+conda create -n GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py
 ```
 
 
@@ -31,7 +31,7 @@ First clone the this repository to any location using `--recursive`:
 git clone --recursive https://github.com/goodproj13/GL-RG.git
 ```
 
-Check out the `coco-caption/`,  `cider/`,  `data/` and `model/` projects into your working directory. If not, please find detailed steps [Here](docs/INSTALL.md) for installation and dataset preparation.
+Check out the `coco-caption/`,  `cider/`,  `data/` and `model/` projects into your working directory. If not, please find detailed steps [INSTALL.md](docs/INSTALL.md) for installation and dataset preparation.
 
 Please run following script to download [Stanford CoreNLP 3.6.0](http://stanfordnlp.github.io/CoreNLP/index.html) models to `coco-caption/`:
 
@@ -62,7 +62,7 @@ Check out the trained model weights under the `model/` directory (following [Ins
 ./test.sh
 ```
 
-**Note:** Please modify `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if experiment setting changes. For more details please refer to [Here](docs/TEST.md).
+**Note:** Please modify `MODEL_NAME`, `EXP_NAME` and `DATASET` in `test.sh` if experiment setting changes. For more details please refer to [TEST.md](docs/TEST.md).
 
 
 
