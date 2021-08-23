@@ -19,6 +19,7 @@ This repo was tested with Python 2.7, [PyTorch](https://pytorch.org) 0.2.0 (1.0.
 You can use anaconda or miniconda to install the dependencies:
 ```bash
 conda create -n GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py requests
+conda activate GL-RG-pytorch
 ```
 
 
