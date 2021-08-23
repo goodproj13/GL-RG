@@ -24,6 +24,7 @@ You can use anaconda or miniconda to install the dependencies:
 
 ```bash
 conda create -n GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py requests
+conda activate GL-RG-pytorch
 ```
 
 
