@@ -3,7 +3,7 @@
 ![framework.png](Figs/framework.png)
 
 `GL-RG` exploit extensive vision representations from different video ranges to improve linguistic expression. We devise a novel global-local encoder to produce rich semantic vocabulary. With our incremental training strategy, `GL-RG` successfully leverages the global-local vision representation to achieve fine-grained captioning on video contents. 
-
+**[Note]** [This branch](https://github.com/goodproj13/GL-RG/tree/main) includes data (>900MB) and links, a smaller version please goto [min-branch/for-review](https://github.com/goodproj13/GL-RG/tree/mini-branch/for-review) (52.5MB).
 
 
 ## Dependencies
