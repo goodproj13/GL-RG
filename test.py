@@ -17,7 +17,54 @@ from train import test
 import utils
 import opts
 
+import requests
+
 logger = logging.getLogger(__name__)
+
+def progress_bar(some_iter):
+    try:
+        from tqdm import tqdm
+        return tqdm(some_iter)
+    except ModuleNotFoundError:
+        return some_iter
+
+def download_file_from_google_drive(file_id, destination):
+    print("Trying to fetch {}".format(destination))
+
+    def get_confirm_token(response):
+        for key, value in response.cookies.items():
+            if key.startswith('download_warning'):
+                return value
+
+        return None
+
+    def save_response_content(response, destination):
+        CHUNK_SIZE = 32768
+
+        with open(destination, "wb") as f:
+            for chunk in progress_bar(response.iter_content(CHUNK_SIZE)):
+                if chunk: # filter out keep-alive new chunks
+                    f.write(chunk)
+
+    URL = "https://docs.google.com/uc?export=download"
+
+    session = requests.Session()
+
+    response = session.get(URL, params = { 'id' : file_id }, stream = True)
+    token = get_confirm_token(response)
+
+    if token:
+        params = { 'id' : file_id, 'confirm' : token }
+        response = session.get(URL, params = params, stream = True)
+
+    save_response_content(response, destination)
+
+ID_DICT = {'GL-RG_XE_msrvtt': '1xaAW-hUbOiXv5kdMxO-gCLAgl-wkre8q',
+           'GL-RG_DXE_msrvtt': '1Jx1sCU2aQt0AA5-dRfRZallsCnbYB1Ud',
+           'GL-RG_DR_msrvtt': '1x8Mh7HJuCmAWjwNExOR8MXqFCNyYttyJ',
+           'GL-RG_XE_msvd': '1J4-I9bf2nB1_HlOLNq8aUpLfuSRvTlq3',
+           'GL-RG_DXE_msvd': '1HixyH_LOT-3HtcsehQT_c9PAlPwFCTd-',
+           'GL-RG_DR_msvd': '1cCisyMpp1mUS9NQPHSn4iCiVmqMfJeL5'}
 
 if __name__ == '__main__':
 
@@ -55,6 +102,14 @@ if __name__ == '__main__':
                 }
 
     test_loader = DataLoader(test_opt)
+
+    if not os.path.exists(opt.model_file):
+        logger.info('downloading model: %s', opt.model_file)
+        model_name = opt.model_file.split('/')[-2]
+        model_dir = os.path.dirname(opt.model_file)
+        if not os.path.exists(model_dir):
+            os.makedirs(model_dir)
+        download_file_from_google_drive(ID_DICT[model_name], opt.model_file)
 
     logger.info('Loading model: %s', opt.model_file)
     checkpoint = torch.load(opt.model_file)
