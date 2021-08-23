@@ -35,8 +35,8 @@ conda create -n GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py requests
 | GL-RG | MSR-VTT | XE | 45.5  | 30.1 | 62.6 | 51.2 | model/GL-RG_XE_msrvtt |
 | GL-RG | MSR-VTT | DXE | **46.9** | 30.4 | 63.9 | 55.0 | model/GL-RG_DXE_msrvtt |
 | GL-RG + IT | MSR-VTT | DR | **46.9** | **31.2** | **65.7** | **60.6** | model/GL-RG_DR_msrvtt |
-| GL-RG | MSVD | XE | 52.3  | 33.8 | 70.4 | 58.7 | model/GL-RG_XE_msvd/model.pth |
-| GL-RG | MSVD | DXE | 57.7 | 38.6 | 74.9 | 95.9 | model/GL-RG_DXE_msvd/model.pth |
+| GL-RG | MSVD | XE | 52.3  | 33.8 | 70.4 | 58.7 | model/GL-RG_XE_msvd |
+| GL-RG | MSVD | DXE | 57.7 | 38.6 | 74.9 | 95.9 | model/GL-RG_DXE_msvd |
 | GL-RG + IT | MSVD | DR | **60.5** | **38.9** | **76.4** | **101.0** | model/GL-RG_DR_msvd |
 
 
