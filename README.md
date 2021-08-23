@@ -14,25 +14,16 @@
 * CIDEr
 * numpy, scikit-image, h5py, requests 
 
-This repo was tested with Python 2.7, PyTorch 0.2.0 (1.0.1), cuDNN 6.0 (10.0), and CUDA 8.0. But it should be runnable with more recent PyTorch>=1.0 (or >=0.2, <=1.0) versions.
-
-You can use anaconda or miniconda to install the dependencies:
-```bash
-conda create -n GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py requests
-```
-
 
 
 ## Installation
 
+This repo was tested with Python 2.7, PyTorch 0.2.0 (1.0.1), cuDNN 6.0 (10.0), and CUDA 8.0. But it should be runnable with more recent PyTorch>=1.0 (or >=0.2, <=1.0) versions.
 
-Check out the `coco-caption/`,  `cider/`,  `data/` and `model/` projects into your working directory. If not, please find detailed steps [INSTALL.md](docs/INSTALL.md) for installation and dataset preparation.
-
-Please run following script to download Stanford CoreNLP 3.6.0 models to `coco-caption/`:
+You can use anaconda or miniconda to install the dependencies:
 
 ```bash
-cd coco-caption
-./get_stanford_models.sh
+conda create -n GL-RG-pytorch python=2.7 pytorch=0.2 scikit-image h5py requests
 ```
 
 
@@ -52,7 +43,7 @@ cd coco-caption
 
 ## Test
 
-Check out the trained model weights under the `model/` directory (following [Installation](docs/INSTALL.md)) and run:
+Please run:
 ```bash
 ./test.sh
 ```
@@ -69,6 +60,6 @@ Check out the trained model weights under the `model/` directory (following [Ins
 
 ## Acknowledgements
 We are truly thankful of the following prior efforts in terms of knowledge contributions and open-source repos.
-+ SA-LSTM: Describing Videos by Exploiting Temporal Structure (ICCV'15) [[paper]](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Yao_Describing_Videos_by_ICCV_2015_paper.pdf) [[implement code]](https://github.com/hobincar/SA-LSTM)
-+ RecNet: Reconstruction Network for Video Captioning (CVPR'18) [[paper]](https://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Reconstruction_Network_for_CVPR_2018_paper.pdf) [[official code]](https://github.com/hobincar/RecNet) 
-+ SAAT: Syntax-Aware Action Targeting for Video Captioning (CVPR'20) [[paper]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zheng_Syntax-Aware_Action_Targeting_for_Video_Captioning_CVPR_2020_paper.pdf) [[official code]](https://github.com/SydCaption/SAAT)
++ SA-LSTM: Describing Videos by Exploiting Temporal Structure (ICCV'15) [paper]  [implement code]
++ RecNet: Reconstruction Network for Video Captioning (CVPR'18) [paper] [official code]
++ SAAT: Syntax-Aware Action Targeting for Video Captioning (CVPR'20) [paper] [official code]

@@ -18,10 +18,14 @@ from six.moves import cPickle
 from dataloader import DataLoader
 from model import CaptionModel, CrossEntropyCriterion, RewardCriterion
 
+from data.setup import setup
+setup()
+
 import utils
 import opts
 
 import sys
+
 
 sys.path.append("cider")
 from pyciderevalcap.cider.cider import Cider
@@ -43,7 +47,6 @@ def language_eval(predictions, cocofmt_file, opt):
     lang_stats = utils.language_eval(cocofmt_file, tmp_checkpoint_json)
     os.remove(tmp_checkpoint_json)
     return lang_stats
-
 
 
 def validate(model, criterion, loader, opt):

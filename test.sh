@@ -3,8 +3,8 @@
 GPU_ID=0
 
 MODEL_NAME=GL-RG
-EXP_NAME=XE         # Choices: [XE, DXE, DR]
-DATASET=msrvtt        # Choices: [msrvtt, msvd]
+EXP_NAME=DR         # Choices: [XE, DXE, DR]
+DATASET=msvd        # Choices: [msrvtt, msvd]
 
 
 if [ "$DATASET" == "msvd" ]; then 
