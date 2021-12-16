@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 GPU_ID=0
-
 MODEL_NAME=GL-RG
 EXP_NAME=XE         # Choices: [XE, DXE, DR]
 DATASET=msrvtt        # Choices: [msrvtt, msvd]
-
 
 if [ "$DATASET" == "msvd" ]; then 
     SEQ_PER_IMG=17
