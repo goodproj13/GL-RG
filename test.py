@@ -76,15 +76,7 @@ if __name__ == '__main__':
     logger.info('Input arguments: %s', json.dumps(vars(opt), sort_keys=True, indent=4))
 
     start = datetime.now()
-
-    # test_opt = {'label_h5': opt.test_label_h5,
-    #             'batch_size': opt.test_batch_size,
-    #             'feat_h5': opt.test_feat_h5,
-    #             'cocofmt_file': opt.test_cocofmt_file,
-    #             'seq_per_img': opt.test_seq_per_img,
-    #             'num_chunks': opt.num_chunks,
-    #             'mode': 'test'
-    #             }
+    
     test_opt = {'label_h5': opt.test_label_h5,
                 'batch_size': opt.test_batch_size,
                 'feat_h5': opt.test_feat_h5,
@@ -121,7 +113,6 @@ if __name__ == '__main__':
     opt.seq_length = checkpoint_opt.seq_length
     opt.feat_dims = checkpoint_opt.feat_dims
 
-    # assert opt.vocab_size == test_loader.get_vocab_size()
     assert opt.seq_length == test_loader.get_seq_length()
     assert opt.feat_dims == test_loader.get_feat_dims()
 
