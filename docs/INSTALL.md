@@ -1,6 +1,6 @@
 ## Installation
 
-**Important:** If you use `--recursive` to clone this repository, skip this section.
+**!Note:** If you use `--recursive` to clone this repository, skip this section.
 
 ### Microsoft COCO Caption Evaluation
 
