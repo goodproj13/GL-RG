@@ -45,7 +45,6 @@ def language_eval(predictions, cocofmt_file, opt):
     return lang_stats
 
 
-
 def validate(model, criterion, loader, opt):
     model.eval()
     loader.reset()
@@ -95,7 +94,6 @@ def validate(model, criterion, loader, opt):
             else:
                 loss_sum += loss.data[0]
             
-
         
         seq, logseq = model.sample(feats, {'beam_size': opt.beam_size})
 
@@ -149,4 +147,3 @@ def test(model, criterion, loader, opt):
 
     json.dump(results, open(opt.result_file, 'w'))
     logger.info('Wrote output caption to: %s ', opt.result_file)
-
