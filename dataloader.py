@@ -208,6 +208,7 @@ class DataLoader():
                     video_batchs[feat_idx][ii] = torch.from_numpy(np.array(self.feat_h5_aud['feats'][self.update_index(video_id, self.feat_h5_files[2])]))
                 feat_idx += 1
 
+            # Fused feature from global-local encoder
             if self.use_sem_tag_feature == 1:
                 if 'mp1' in self.feat_h5_files[3]:
                     video_batchs[feat_idx][ii] = torch.from_numpy(np.array(self.feat_h5_sem_tag[str(video_id)]))
@@ -215,13 +216,6 @@ class DataLoader():
                     video_batchs[feat_idx][ii] = torch.from_numpy(np.array(self.feat_h5_sem_tag['feats'][self.update_index(video_id, self.feat_h5_files[3])]))
                 feat_idx += 1
 
-
-            '''
-            if 'mp1' in self.feat_h5_files[3]:
-                video_batchs[3][ii] = torch.from_numpy(np.array(self.feat_h5_cls[str(video_id)]))
-            else:
-                video_batchs[3][ii] = torch.from_numpy(np.array(self.feat_h5_cls[str(video_id)]))
-            '''
 
             if self.has_label:
                 # fetch the sequence labels
