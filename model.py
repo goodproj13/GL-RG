@@ -66,8 +66,6 @@ class FeatPool(nn.Module):
             module_list += [module]
         self.feat_list = nn.ModuleList(module_list)
 
-        # self.embed = nn.Sequential(nn.Linear(sum(feat_dims), out_size), nn.ReLU(), nn.Dropout(dropout))
-
     def forward(self, feats):
         """
         feats is a list, each element is a tensor that have size (N x C x F)
@@ -79,8 +77,6 @@ class FeatPool(nn.Module):
 
         out = torch.cat([m(feats[i].squeeze(1))
                          for i, m in enumerate(self.feat_list)], 1)
-        # pdb.set_trace()
-        # out = self.embed(torch.cat(feats, 2).squeeze(1))
         return out
 
 
@@ -283,9 +279,6 @@ class CaptionModel(nn.Module):
 
     def forward(self, feats, seq):
 
-        # for feat in feats:
-        #     print(feat.size())
-
         fc_feats = self.feat_pool(feats)
         fc_feats = self.feat_expander(fc_feats)
 
@@ -345,12 +338,10 @@ class CaptionModel(nn.Module):
                     fc_feats = self.manet(fc_feats, state[0])
                 output, state = self.core(torch.cat([xt, fc_feats], 1), state)
 
-            # print(output)
 
             if token_idx >= 0:
                 output = F.log_softmax(self.logit(self.dropout(output)))
                 outputs.append(output)
-            # print(output)
 
         # only returns outputs of seq input
         # output size is: B x L x V (where L is truncated lengths
