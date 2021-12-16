@@ -15,6 +15,7 @@ def parse_opts():
     parser.add_argument('--val_cocofmt_file', type=str, help='Gold captions in MSCOCO format to cal language metrics')
     parser.add_argument('--test_cocofmt_file', type=str, help='Gold captions in MSCOCO format to cal language metrics')
     parser.add_argument('--train_bcmrscores_pkl', type=str, help='Pre-computed Cider-D metric for all captions')
+    
     # Optimization: General
     parser.add_argument('--max_patience', type=int, default=5, help='max number of epoch to run since the minima is detected -- early stopping')
     parser.add_argument('--batch_size', type=int, default=128, help='Video batch size (there will be x seq_per_img sentences)')
@@ -23,6 +24,7 @@ def parse_opts():
     parser.add_argument('--test_seq_per_img', type=int, default=20, help='number of captions to sample for each image during training. Done for efficiency since CNN forward pass is expensive.')
     parser.add_argument('--learning_rate', type=float, default=1e-4, help='learning rate')
     parser.add_argument('--lr_update', default=50, type=int, help='Number of epochs to update the learning rate.')
+    
     # Model settings
     parser.add_argument('--rnn_type', type=str, default='lstm', choices=['lstm', 'gru', 'rnn'], help='type of RNN')
     parser.add_argument('--rnn_size', type=int, default=512, help='size of the rnn in number of hidden nodes in each layer')
@@ -31,11 +33,13 @@ def parse_opts():
     parser.add_argument('--max_epochs', type=int, default=sys.maxsize, help='max number of epochs to run for (-1 = run forever)')
     parser.add_argument('--grad_clip', type=float, default=0.25, help='clip gradients at this value (note should be lower than usual 5 because we normalize grads by both batch and seq_length)')
     parser.add_argument('--drop_prob_lm', type=float, default=0.5, help='strength of dropout in the Language Model RNN')
+    
     # Optimization: for the Language Model
     parser.add_argument('--optim', type=str, default='adam', help='what update to use? sgd|sgdmom|adagrad|adam')
     parser.add_argument('--optim_alpha', type=float, default=0.8, help='alpha for adagrad/rmsprop/momentum/adam')
     parser.add_argument('--optim_beta', type=float, default=0.999, help='beta used for adam')
     parser.add_argument('--optim_epsilon', type=float, default=1e-8, help='epsilon that goes into denominator for smoothing')
+    
     # Evaluation/Checkpointing
     parser.add_argument('--save_checkpoint_from', type=int, default=20, help='Start saving checkpoint from this epoch')
     parser.add_argument('--save_checkpoint_every', type=int, default=1, help='how often to save a model checkpoint in epochs?')
@@ -51,6 +55,7 @@ def parse_opts():
     parser.add_argument('--test_language_eval', type=int, default=1, help='Evaluate language evaluation')
     parser.add_argument('--print_log_interval', type=int, default=20, help='How often do we snapshot losses, for inclusion in the progress dump? (0 = disable)')
     parser.add_argument('--loglevel', type=str, default='DEBUG', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'])
+    
     # misc
     parser.add_argument('--seed', type=int, default=123, help='random number generator seed to use')
     parser.add_argument('--gpuid', type=int, default=7, help='which gpu to use. -1 = use CPU')
